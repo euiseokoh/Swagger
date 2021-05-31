@@ -1,0 +1,36 @@
+{
+  "name": "swagget-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start --watch"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "~1.18.2",
+    "connect-redis": "^3.3.3",
+    "date-utils": "^1.2.21",
+    "dateformat": "^3.0.2",
+    "debug": "~2.6.9",
+    "express": "~4.16.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "google-auth-library": "7.0.2",
+    "googleapis": "67.1.1",
+    "helmet": "^3.9.0",
+    "jsonwebtoken": "8.5.1",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.1.1",
+    "redis": "^2.8.0",
+    "request": "^2.87.0",
+    "swagger-jsdoc": "6.0.0",
+    "swagger-ui-express": "4.1.6",
+    "winston": "^3.0.0",
+    "winston-daily-rotate-file": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "8.3.2",
+    "supertest": "^3.0.0"
+  }
+}

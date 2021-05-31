@@ -1,0 +1,49 @@
+swagger: "2.0"
+tags:
+- name: "Auth"
+  description: "Auth 관련 API"
+paths:
+  /jwttest/authApi:
+    post:
+      tags:
+      - "Auth"
+      summary: "API 인증"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "body"
+        in: "body"
+        required: true
+        schema:
+            $ref: "#/definitions/ApiAuthParam"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  
+definitions:
+  ApiAuthParam:
+    type: "object"
+    required:
+    - "jwt_token"
+    properties:
+      jwt_token:
+        type: "string"
+        description: "Token Key"
+  ApiResponse:
+    type: "object"
+    properties:
+      messageInfo:
+        type: "object"
+        properties:
+          code:
+            type: "integer"
+            format: "int32"
+          message:
+            type: "string"
+      record:
+        type: "object"
